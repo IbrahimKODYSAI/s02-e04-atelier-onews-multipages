@@ -21,7 +21,7 @@
           </p>
         </div>
 
-                 <?php include("inc/nav.php"); ?>
+        <?php include("inc/nav.php"); ?>
 
       </header>
       <main class="right">
@@ -34,13 +34,29 @@
             <form action="traitement_formulaire.php" method="POST">
 
 
-            <input type="radio" name="sexe" value="mme" checked>Mme /
+                          <div id="infos">
+    <div id="gauche">
+    <input type="radio" name="sexe" value="mme" checked>Mme /
+                    <input type="radio" name="sexe" value="mr">M 
+    </div>
+    <div id="droite">
+        <div class="info_droite">
+        <input name="prenom"style="width:99%"; class="label" value="Prenom"> 
+        </div>
+        <div class="info_droite">
+                    <input name="nom" style="width:99%; " class="label"  value="Nom">
+        </div>
+    </div>
+</div>
+
+
+            <!-- <input type="radio" name="sexe" value="mme" checked>Mme /
             <input type="radio" name="sexe" value="mr">M 
             <input name="prenom" class="label" value="Prenom"> 
-            <input name="nom" class="label"  value="Nom">
+            <input name="nom" class="label"  value="Nom"> -->
 
             <p><input type="email" class="label" value="Adresse E-Girl"></p>
-            <p>J'ai connu ce site grâce à
+            <p>J'ai connu ce site grâce à :
             <select name="connaissance">
                 <option> choisir</option>
                 <option> Facebook</option>
@@ -61,7 +77,7 @@
             <input type="checkbox" name="valide" value="">Je certifie la véracité de ces informations
             <!-- <hr>  permet de mettre des trait de séparation -->
             <p class="separation"></p>
-            Ajouter un fichier : <input type="file" name="fichier" />
+            Ajouter un fichier : <input type="file" name="fichier" value="Parcourir" >
 
            <p class="separation"></p>
 

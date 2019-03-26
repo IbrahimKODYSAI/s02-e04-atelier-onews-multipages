@@ -6,6 +6,7 @@ form {
     width: 90%; 
     margin:auto; 
     padding:20px;
+    margin-top: 50px;
 } 
 input{
     background-color:#F8F6F6; 
@@ -50,12 +51,28 @@ input[type=email]{
     margin: 30px 0;
 }
 
-/* .left{ background-image: url(../images/face.jpg);}
+input[type=radio]{
+    display:inline-block;
+    width:15px;
+    height:15px;
+}
+input[type=file]{
+    border:none;
+    background-color: #F8F6F6;
+    border-bottom:none; 
+}
 
+#infos{display:flex; justify-content:space-between; width:100%;}
+#gauche{flex:1; min-width: 100px;text-align:left;}
+#droite{flex:7; text-align:right; display:flex; justify-content:space-between;margin:0px;}
+.info_droite{width:50%;}
 
+/* .left{ background-image: url(../images/face.jpg);}rr
+
+s
 form {
     border:1px #eeeeee solid; 
-    width: 90%; 
+    width: 90%;
     margin:auto;
     padding:20px;
 } 

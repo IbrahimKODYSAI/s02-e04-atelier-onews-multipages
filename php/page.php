@@ -2,16 +2,10 @@
 if (isset($_GET['numpage']))
 {
     $numpage=$_GET['numpage'];    
-}
-
-
-else{
+}else{
 
 header('Location: index.php');
-
 }
-
-
 
 include("inc/articles.php");
 
@@ -23,6 +17,7 @@ include("inc/articles.php");
     <meta charset="UTF-8">
     <title>oNews</title>
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style2.css">
 </head>
 <body>
@@ -39,13 +34,14 @@ include("inc/articles.php");
         <?php include("inc/nav.php"); ?>
       </header>
       <main class="right">
-        <h2 class="right__title"><?= $pages[$numpage]['titre'];?></h2>
+
+          <h2 class="right__title"><?= $pages[$numpage]['titre'];?></h2>
 
 
 
 
 
-        <article class="post">
+          <article class="post">
 
             <a href="" class="post__category post__category--color-<?= $pages[$numpage]['type_article']; ?>"><?= $pages[$numpage]['type_article']; ?></a>
             
@@ -59,11 +55,10 @@ include("inc/articles.php");
             foreach($pages[$numpage]['article'] as $paragraphes)
             {
             
-                    echo "<p>".$paragraphes."</p>";
-
+               echo "<p>".$paragraphes."</p>";
             }
             ?>
-        </article>
+          </article>
 
       </main>
     </div>
